@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Przegladarka.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Przegladarka"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="White">
+
+    <Grid>
+        <Grid.Background>
+            <AcrylicBrush TintOpacity="0.695"/>
+        </Grid.Background>
+        <Button x:ConnectionId='2' x:Name="Prev" Margin="10,10,0,0" VerticalAlignment="Top"                   >
+            <SymbolIcon Symbol="Back" />
+        </Button>
+        <Button x:ConnectionId='3' x:Name="Next" Margin="55,10,0,0" VerticalAlignment="Top"                   >
+            <SymbolIcon Symbol="Forward" />
+        </Button>
+        <Button x:ConnectionId='4' x:Name="Stop" Margin="100,10,0,0" VerticalAlignment="Top"                   >
+            <SymbolIcon Symbol="Cancel" HorizontalAlignment="Right" Width="20" />
+        </Button>
+        <Button x:ConnectionId='5' x:Name="Reload" Margin="145,10,0,0" VerticalAlignment="Top"                     >
+            <SymbolIcon Symbol="Refresh" HorizontalAlignment="Right" Width="20" />
+        </Button>
+        <Button x:ConnectionId='6' x:Name="Search" Margin="1230,10,0,0" VerticalAlignment="Top"                     >
+            <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Find" />
+        </Button>
+        <Button x:ConnectionId='7' x:Name="AddToFav" Margin="1185,10,0,0" VerticalAlignment="Top"                       >
+            <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Favorite" />
+        </Button>
+        <ComboBox Margin="200,10,0,0" Width="980"/>
+        <TextBox x:ConnectionId='8' x:Name="TextBoxSearch" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260"                                />
+        <WebView x:ConnectionId='9' x:Name="webView"  Margin="10,94,10,21"/>
+        
+
+    </Grid>
+</Page>
+
