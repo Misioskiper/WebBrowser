@@ -41,3 +41,8 @@ C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\qualifiers.txt
 C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\MP\source\repos\Przegladarka\Przegladarka\bin\x86\Debug\AddFavorite.xbf
+C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\AddFavorite.g.i.cs
+C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\AddFavorite.g.cs
+C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\AddFavorite.xaml
+C:\Users\MP\source\repos\Przegladarka\Przegladarka\obj\x86\Debug\AddFavorite.xbf

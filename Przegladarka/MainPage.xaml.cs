@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Przegladarka.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
+using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +27,8 @@ namespace Przegladarka
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
+
         public Uri HomePage { get; set; }
         public Uri Page { get; set; }
         private string _homePage = "https://google.pl";
@@ -29,8 +36,15 @@ namespace Przegladarka
         public MainPage()
         {
             this.InitializeComponent();
-            this.HomePage = new Uri(_homePage);
-            this.webView.Navigate(HomePage);
+            InitializeMainPage();
+        }
+
+        private void InitializeMainPage()
+        {
+            var appView = ApplicationView.GetForCurrentView();
+            appView.Title = "MisioskiperDEV Internet Browser";
+            var homePage = new Uri("https://google.com");
+            webView.Navigate(homePage);
         }
 
         private void Prev_Click(object sender, RoutedEventArgs e)
@@ -59,25 +73,42 @@ namespace Przegladarka
             this.webView.Refresh();
         }
 
-        private void AddToFav_Click(object sender, RoutedEventArgs e)
+        private async void AddToFav_Click(object sender, RoutedEventArgs e)
         {
+            var currentSiteUrl = webView.Source.ToString();
+            var addToFavoriteDialog = new AddFavorite(currentSiteUrl);
+            await addToFavoriteDialog.ShowAsync();
 
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            string link = TextBoxSearch.Text;
-            this.Page = new Uri(link);
-            this.webView.Navigate(Page);
+            string link = _urlTextBox.Text;
+            this.webView.Navigate(new Uri(link));
         }
 
-        private void TextBoxSearch_KeyDown(object sender, KeyRoutedEventArgs e)
+        private async void _urlTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (e.Key == Windows.System.VirtualKey.Enter)
+            if (e.Key != VirtualKey.Enter)
+                return;
+
+            var searchedSite = _urlTextBox.Text;
+            if (searchedSite.HasHttpScheme() || searchedSite.HasHttpsScheme())
             {
-                this.Page = new Uri(TextBoxSearch.Text);
-                this.webView.Navigate(Page);
+                webView.Navigate(new Uri(searchedSite));
             }
+            else
+            {
+                var dialog = new MessageDialog("Please type valid site address.");
+                await dialog.ShowAsync();
+            }
+        }
+
+        private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            _urlTextBox.Text = sender.Source.ToString();
+            Prev.IsEnabled = sender.CanGoBack;
+            Next.IsEnabled = sender.CanGoForward;
         }
     }
 }

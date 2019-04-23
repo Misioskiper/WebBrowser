@@ -23,16 +23,16 @@
         <Button x:ConnectionId='5' x:Name="Reload" Margin="145,10,0,0" VerticalAlignment="Top"                     >
             <SymbolIcon Symbol="Refresh" HorizontalAlignment="Right" Width="20" />
         </Button>
-        <Button x:ConnectionId='6' x:Name="Search" Margin="1230,10,0,0" VerticalAlignment="Top"                     >
-            <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Find" />
+        <Button x:ConnectionId='6' x:Name="Search" Margin="1228,10,0,0" VerticalAlignment="Top"                     >
+            <SymbolIcon Symbol="Find" />
         </Button>
-        <Button x:ConnectionId='7' x:Name="AddToFav" Margin="1185,10,0,0" VerticalAlignment="Top"                       >
+        <Button x:ConnectionId='7' x:Name="AddToFav" Margin="1183,10,0,0" VerticalAlignment="Top"                       >
             <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Favorite" />
         </Button>
-        <ComboBox Margin="200,10,0,0" Width="980"/>
-        <TextBox x:ConnectionId='8' x:Name="TextBoxSearch" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260"                                />
-        <WebView x:ConnectionId='9' x:Name="webView"  Margin="10,94,10,21"/>
-        
+        <ComboBox Margin="200,10,0,0" Width="968"/>
+        <TextBox x:ConnectionId='8' x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260"                              />
+        <WebView x:ConnectionId='9' x:Name="webView"  Margin="10,94,10,21"                                                  />
+
 
     </Grid>
 </Page>

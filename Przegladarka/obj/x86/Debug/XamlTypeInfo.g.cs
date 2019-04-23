@@ -189,19 +189,33 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "Przegladarka.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "System.Uri";
-            _typeNameTable[4] = "Object";
+            _typeNameTable = new string[12];
+            _typeNameTable[0] = "Przegladarka.AddFavorite";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[3] = "Przegladarka.AddFavoriteResult";
+            _typeNameTable[4] = "System.Enum";
+            _typeNameTable[5] = "System.ValueType";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "String";
+            _typeNameTable[8] = "Przegladarka.MainPage";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[10] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[11] = "System.Uri";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Przegladarka.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::System.Uri);
-            _typeTable[4] = typeof(global::System.Object);
+            _typeTable = new global::System.Type[12];
+            _typeTable[0] = typeof(global::Przegladarka.AddFavorite);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[3] = typeof(global::Przegladarka.AddFavoriteResult);
+            _typeTable[4] = typeof(global::System.Enum);
+            _typeTable[5] = typeof(global::System.ValueType);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::System.String);
+            _typeTable[8] = typeof(global::Przegladarka.MainPage);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[11] = typeof(global::System.Uri);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -236,7 +250,7 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::Przegladarka.MainPage(); }
+        private object Activate_8_MainPage() { return new global::Przegladarka.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -248,53 +262,122 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Przegladarka.MainPage
+            case 0:   //  Przegladarka.AddFavorite
+                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.AddMemberName("Result");
+                userType.AddMemberName("SiteName");
+                userType.AddMemberName("SiteUrl");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 1:   //  Windows.UI.Xaml.Controls.ContentDialog
+                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Windows.UI.Xaml.Controls.ContentControl
+                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  Przegladarka.AddFavoriteResult
+                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Add", global::Przegladarka.AddFavoriteResult.Add);
+                userType.AddEnumValue("Cancel", global::Przegladarka.AddFavoriteResult.Cancel);
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  System.Enum
+                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 5:   //  System.ValueType
+                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 6:   //  Object
+                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  String
+                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  Przegladarka.MainPage
                 userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_8_MainPage;
                 userType.AddMemberName("HomePage");
                 userType.AddMemberName("Page");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 9:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 10:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  System.Uri
+            case 11:   //  System.Uri
                 userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
-                break;
-
-            case 4:   //  Object
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_MainPage_HomePage(object instance)
+        private object get_0_AddFavorite_Result(object instance)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            return that.Result;
+        }
+        private void set_0_AddFavorite_Result(object instance, object Value)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            that.Result = (global::Przegladarka.AddFavoriteResult)Value;
+        }
+        private object get_1_AddFavorite_SiteName(object instance)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            return that.SiteName;
+        }
+        private void set_1_AddFavorite_SiteName(object instance, object Value)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            that.SiteName = (global::System.String)Value;
+        }
+        private object get_2_AddFavorite_SiteUrl(object instance)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            return that.SiteUrl;
+        }
+        private void set_2_AddFavorite_SiteUrl(object instance, object Value)
+        {
+            var that = (global::Przegladarka.AddFavorite)instance;
+            that.SiteUrl = (global::System.String)Value;
+        }
+        private object get_3_MainPage_HomePage(object instance)
         {
             var that = (global::Przegladarka.MainPage)instance;
             return that.HomePage;
         }
-        private void set_0_MainPage_HomePage(object instance, object Value)
+        private void set_3_MainPage_HomePage(object instance, object Value)
         {
             var that = (global::Przegladarka.MainPage)instance;
             that.HomePage = (global::System.Uri)Value;
         }
-        private object get_1_MainPage_Page(object instance)
+        private object get_4_MainPage_Page(object instance)
         {
             var that = (global::Przegladarka.MainPage)instance;
             return that.Page;
         }
-        private void set_1_MainPage_Page(object instance, object Value)
+        private void set_4_MainPage_Page(object instance, object Value)
         {
             var that = (global::Przegladarka.MainPage)instance;
             that.Page = (global::System.Uri)Value;
@@ -307,17 +390,35 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "Przegladarka.AddFavorite.Result":
+                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "Result", "Przegladarka.AddFavoriteResult");
+                xamlMember.Getter = get_0_AddFavorite_Result;
+                xamlMember.Setter = set_0_AddFavorite_Result;
+                break;
+            case "Przegladarka.AddFavorite.SiteName":
+                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "SiteName", "String");
+                xamlMember.Getter = get_1_AddFavorite_SiteName;
+                xamlMember.Setter = set_1_AddFavorite_SiteName;
+                break;
+            case "Przegladarka.AddFavorite.SiteUrl":
+                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "SiteUrl", "String");
+                xamlMember.Getter = get_2_AddFavorite_SiteUrl;
+                xamlMember.Setter = set_2_AddFavorite_SiteUrl;
+                break;
             case "Przegladarka.MainPage.HomePage":
                 userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
                 xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "HomePage", "System.Uri");
-                xamlMember.Getter = get_0_MainPage_HomePage;
-                xamlMember.Setter = set_0_MainPage_HomePage;
+                xamlMember.Getter = get_3_MainPage_HomePage;
+                xamlMember.Setter = set_3_MainPage_HomePage;
                 break;
             case "Przegladarka.MainPage.Page":
                 userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
                 xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "Page", "System.Uri");
-                xamlMember.Getter = get_1_MainPage_Page;
-                xamlMember.Setter = set_1_MainPage_Page;
+                xamlMember.Getter = get_4_MainPage_Page;
+                xamlMember.Setter = set_4_MainPage_Page;
                 break;
             }
             return xamlMember;
