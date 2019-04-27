@@ -32,6 +32,7 @@
         <ComboBox Margin="200,10,0,0" Width="968"/>
         <TextBox x:ConnectionId='8' x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260"                              />
         <WebView x:ConnectionId='9' x:Name="webView"  Margin="10,94,10,21"                                                  />
+        <StackPanel/>
 
 
     </Grid>

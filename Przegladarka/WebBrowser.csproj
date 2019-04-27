@@ -7,8 +7,8 @@
     <ProjectGuid>{DBD3FA78-0F1E-499B-8C2B-3F95EE98D84F}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Przegladarka</RootNamespace>
-    <AssemblyName>Przegladarka</AssemblyName>
+    <RootNamespace>WebBrowser</RootNamespace>
+    <AssemblyName>WebBrowser</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
