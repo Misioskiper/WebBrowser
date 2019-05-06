@@ -33,6 +33,10 @@ namespace Przegladarka
 
         partial void UnloadObject(global::Windows.UI.Xaml.DependencyObject unloadableObject);
 
+        private global::Windows.UI.Xaml.Controls.Button Prev;
+        private global::Windows.UI.Xaml.Controls.Button Next;
+        private global::Windows.UI.Xaml.Controls.Button Stop;
+        private global::Windows.UI.Xaml.Controls.Button Reload;
     }
 }
 

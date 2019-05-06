@@ -9,14 +9,31 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto" Orientation="Horizontal">
+            <Button x:Name="Prev" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Prev_Click">
+                <SymbolIcon Symbol="Back" />
+            </Button>
+            <Button x:Name="Next" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Next_Click">
+                <SymbolIcon Symbol="Forward" />
+            </Button>
+            <Button x:Name="Stop" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Stop_Click">
+                <SymbolIcon Symbol="Cancel"/>
+            </Button>
+            <Button x:Name="Reload" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Reload_Click">
+                <SymbolIcon Symbol="Refresh"  />
+            </Button>
+        </StackPanel>
+
     </Grid>
 
     <!--<Grid>
@@ -46,5 +63,5 @@
         <WebView x:Name="webView"  Margin="10,94,10,21" NavigationCompleted="WebView_NavigationCompleted"/>
         <StackPanel/>
     </Grid>-->
-    
+
 </Page>
