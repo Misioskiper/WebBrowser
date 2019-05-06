@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="White">
 
-    <Grid>
+    <!--<Grid>
         <Grid.Background>
             <AcrylicBrush TintOpacity="0.695"/>
         </Grid.Background>
@@ -33,7 +33,6 @@
         <TextBox x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260" KeyDown="_urlTextBox_KeyDown"/>
         <WebView x:Name="webView"  Margin="10,94,10,21" NavigationCompleted="WebView_NavigationCompleted"/>
         <StackPanel/>
-
-
-    </Grid>
+    </Grid>-->
+    
 </Page>
