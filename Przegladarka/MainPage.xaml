@@ -18,7 +18,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
-        
+
+        <Grid.Background>
+            <AcrylicBrush TintOpacity="0.695"/>
+        </Grid.Background>
+
         <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Orientation="Horizontal">
             <Button x:Name="Prev" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Prev_Click">
                 <SymbolIcon Symbol="Back" />
@@ -37,9 +41,7 @@
     </Grid>
 
     <!--<Grid>
-        <Grid.Background>
-            <AcrylicBrush TintOpacity="0.695"/>
-        </Grid.Background>
+
         <Button x:Name="Prev" Margin="10,10,0,0" VerticalAlignment="Top" Click="Prev_Click">
             <SymbolIcon Symbol="Back" />
         </Button>
