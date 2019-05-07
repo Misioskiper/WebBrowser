@@ -37,30 +37,19 @@
                 <SymbolIcon Symbol="Refresh"  />
             </Button>
         </StackPanel>
+        <ComboBox x:Name="FavoritesComboBox" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"></ComboBox>
+
 
     </Grid>
 
     <!--<Grid>
-
-        <Button x:Name="Prev" Margin="10,10,0,0" VerticalAlignment="Top" Click="Prev_Click">
-            <SymbolIcon Symbol="Back" />
-        </Button>
-        <Button x:Name="Next" Margin="55,10,0,0" VerticalAlignment="Top" Click="Next_Click">
-            <SymbolIcon Symbol="Forward" />
-        </Button>
-        <Button x:Name="Stop" Margin="100,10,0,0" VerticalAlignment="Top" Click="Stop_Click">
-            <SymbolIcon Symbol="Cancel" HorizontalAlignment="Right" Width="20" />
-        </Button>
-        <Button x:Name="Reload" Margin="145,10,0,0" VerticalAlignment="Top" Click="Reload_Click">
-            <SymbolIcon Symbol="Refresh" HorizontalAlignment="Right" Width="20" />
-        </Button>
+    
         <Button x:Name="Search" Margin="1228,10,0,0" VerticalAlignment="Top" Click="Search_Click">
             <SymbolIcon Symbol="Find" />
         </Button>
         <Button x:Name="AddToFav" Margin="1183,10,0,0" VerticalAlignment="Top" Click="AddToFav_Click">
             <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Favorite" />
-        </Button>
-        <ComboBox Margin="200,10,0,0" Width="968"/>
+        </Button>       
         <TextBox x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260" KeyDown="_urlTextBox_KeyDown"/>
         <WebView x:Name="webView"  Margin="10,94,10,21" NavigationCompleted="WebView_NavigationCompleted"/>
         <StackPanel/>
