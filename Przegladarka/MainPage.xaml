@@ -18,18 +18,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
-
-        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto" Orientation="Horizontal">
-            <Button x:Name="Prev" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Prev_Click">
+        
+        <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Orientation="Horizontal">
+            <Button x:Name="Prev" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Prev_Click">
                 <SymbolIcon Symbol="Back" />
             </Button>
-            <Button x:Name="Next" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Next_Click">
+            <Button x:Name="Next" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Next_Click">
                 <SymbolIcon Symbol="Forward" />
             </Button>
-            <Button x:Name="Stop" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Stop_Click">
+            <Button x:Name="Stop" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Stop_Click">
                 <SymbolIcon Symbol="Cancel"/>
             </Button>
-            <Button x:Name="Reload" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Reload_Click">
+            <Button x:Name="Reload" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Reload_Click">
                 <SymbolIcon Symbol="Refresh"  />
             </Button>
         </StackPanel>
