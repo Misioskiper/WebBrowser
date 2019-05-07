@@ -22,7 +22,7 @@
         <Grid.Background>
             <AcrylicBrush TintOpacity="0.695"/>
         </Grid.Background>
-        
+
         <!--First row-->
         <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="Auto" Orientation="Horizontal">
             <Button x:Name="Prev" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Prev_Click">
@@ -47,24 +47,13 @@
                 <SymbolIcon Symbol="Find" />
             </Button>
         </StackPanel>
-        
+
         <!--SecondRow-->
         <TextBox x:Name="_urlTextBox" Margin="10,0,10,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="" KeyDown="_urlTextBox_KeyDown"/>
-        
 
-
+        <!--Third row-->
+        <WebView x:Name="webView"  Margin="10" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" 
+                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationCompleted="WebView_NavigationCompleted"/>
     </Grid>
-
-    <!--<Grid>
-    
-        <Button x:Name="Search" VerticalAlignment="Scretch" Click="Search_Click">
-            <SymbolIcon Symbol="Find" />
-        </Button>
-      
-        <TextBox x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260" KeyDown="_urlTextBox_KeyDown"/>
-        <WebView x:Name="webView"  Margin="10,94,10,21" NavigationCompleted="WebView_NavigationCompleted"/>
-        <StackPanel/>
-    </Grid>-->
-
 </Page>
