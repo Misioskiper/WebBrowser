@@ -13,9 +13,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -41,27 +46,40 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.AcrylicBrush">
       <RootProperty Name="TintOpacity" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Content" />
-      <RootEvent Name="Click" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="NavigationCompleted" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
     </RootType>
     <RootType FullName="Przegladarka.MainPage" />

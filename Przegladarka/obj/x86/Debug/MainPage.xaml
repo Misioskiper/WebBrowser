@@ -8,33 +8,53 @@
     mc:Ignorable="d" Background="White">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+
         <Grid.Background>
             <AcrylicBrush TintOpacity="0.695"/>
         </Grid.Background>
-        <Button x:ConnectionId='2' x:Name="Prev" Margin="10,10,0,0" VerticalAlignment="Top"                   >
-            <SymbolIcon Symbol="Back" />
-        </Button>
-        <Button x:ConnectionId='3' x:Name="Next" Margin="55,10,0,0" VerticalAlignment="Top"                   >
-            <SymbolIcon Symbol="Forward" />
-        </Button>
-        <Button x:ConnectionId='4' x:Name="Stop" Margin="100,10,0,0" VerticalAlignment="Top"                   >
-            <SymbolIcon Symbol="Cancel" HorizontalAlignment="Right" Width="20" />
-        </Button>
-        <Button x:ConnectionId='5' x:Name="Reload" Margin="145,10,0,0" VerticalAlignment="Top"                     >
-            <SymbolIcon Symbol="Refresh" HorizontalAlignment="Right" Width="20" />
-        </Button>
-        <Button x:ConnectionId='6' x:Name="Search" Margin="1228,10,0,0" VerticalAlignment="Top"                     >
-            <SymbolIcon Symbol="Find" />
-        </Button>
-        <Button x:ConnectionId='7' x:Name="AddToFav" Margin="1183,10,0,0" VerticalAlignment="Top"                       >
-            <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Favorite" />
-        </Button>
-        <ComboBox Margin="200,10,0,0" Width="968"/>
-        <TextBox x:ConnectionId='8' x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260"                              />
-        <WebView x:ConnectionId='9' x:Name="webView"  Margin="10,94,10,21"                                                  />
-        <StackPanel/>
 
+        <!--First row-->
+        <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button x:ConnectionId='7' x:Name="Prev" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40"                   >
+                <SymbolIcon Symbol="Back" />
+            </Button>
+            <Button x:ConnectionId='8' x:Name="Next" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40"                   >
+                <SymbolIcon Symbol="Forward" />
+            </Button>
+            <Button x:ConnectionId='9' x:Name="Stop" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40"                   >
+                <SymbolIcon Symbol="Cancel"/>
+            </Button>
+            <Button x:ConnectionId='10' x:Name="Reload" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40"                     >
+                <SymbolIcon Symbol="Refresh"  />
+            </Button>
+        </StackPanel>
+        <ComboBox x:ConnectionId='2' x:Name="FavoritesComboBox" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto"></ComboBox>
+        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button x:ConnectionId='5' x:Name="AddToFav" Margin="5,0,0,0" VerticalAlignment="Stretch" Width="40"                       >
+                <SymbolIcon Symbol="Favorite" />
+            </Button>
+            <Button x:ConnectionId='6' x:Name="Search" Margin="5,0,0,0" VerticalAlignment="Stretch" Width="40"                     >
+                <SymbolIcon Symbol="Find" />
+            </Button>
+        </StackPanel>
 
+        <!--SecondRow-->
+        <TextBox x:ConnectionId='3' x:Name="_urlTextBox" Margin="20,0,20,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Width="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center" Text=""                              />
+
+        <!--Third row-->
+        <WebView x:ConnectionId='4' x:Name="webView"  Margin="20" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                                  />
     </Grid>
 </Page>
 

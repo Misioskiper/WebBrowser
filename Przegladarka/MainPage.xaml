@@ -8,32 +8,52 @@
     mc:Ignorable="d" Background="White">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+
         <Grid.Background>
             <AcrylicBrush TintOpacity="0.695"/>
         </Grid.Background>
-        <Button x:Name="Prev" Margin="10,10,0,0" VerticalAlignment="Top" Click="Prev_Click">
-            <SymbolIcon Symbol="Back" />
-        </Button>
-        <Button x:Name="Next" Margin="55,10,0,0" VerticalAlignment="Top" Click="Next_Click">
-            <SymbolIcon Symbol="Forward" />
-        </Button>
-        <Button x:Name="Stop" Margin="100,10,0,0" VerticalAlignment="Top" Click="Stop_Click">
-            <SymbolIcon Symbol="Cancel" HorizontalAlignment="Right" Width="20" />
-        </Button>
-        <Button x:Name="Reload" Margin="145,10,0,0" VerticalAlignment="Top" Click="Reload_Click">
-            <SymbolIcon Symbol="Refresh" HorizontalAlignment="Right" Width="20" />
-        </Button>
-        <Button x:Name="Search" Margin="1228,10,0,0" VerticalAlignment="Top" Click="Search_Click">
-            <SymbolIcon Symbol="Find" />
-        </Button>
-        <Button x:Name="AddToFav" Margin="1183,10,0,0" VerticalAlignment="Top" Click="AddToFav_Click">
-            <SymbolIcon HorizontalAlignment="Right" Width="20" Symbol="Favorite" />
-        </Button>
-        <ComboBox Margin="200,10,0,0" Width="968"/>
-        <TextBox x:Name="_urlTextBox" HorizontalAlignment="Center" Margin="0,47,0,0" Text="" VerticalAlignment="Top" Width="1260" KeyDown="_urlTextBox_KeyDown"/>
-        <WebView x:Name="webView"  Margin="10,94,10,21" NavigationCompleted="WebView_NavigationCompleted"/>
-        <StackPanel/>
 
+        <!--First row-->
+        <StackPanel Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="Prev" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40" Click="Prev_Click">
+                <SymbolIcon Symbol="Back" />
+            </Button>
+            <Button x:Name="Next" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40" Click="Next_Click">
+                <SymbolIcon Symbol="Forward" />
+            </Button>
+            <Button x:Name="Stop" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40" Click="Stop_Click">
+                <SymbolIcon Symbol="Cancel"/>
+            </Button>
+            <Button x:Name="Reload" Margin="5,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="40" Click="Reload_Click">
+                <SymbolIcon Symbol="Refresh"  />
+            </Button>
+        </StackPanel>
+        <ComboBox x:Name="FavoritesComboBox" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto"></ComboBox>
+        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="AddToFav" Margin="5,0,0,0" VerticalAlignment="Stretch" Width="40" Click="AddToFav_Click">
+                <SymbolIcon Symbol="Favorite" />
+            </Button>
+            <Button x:Name="Search" Margin="5,0,0,0" VerticalAlignment="Stretch" Width="40" Click="Search_Click">
+                <SymbolIcon Symbol="Find" />
+            </Button>
+        </StackPanel>
 
+        <!--SecondRow-->
+        <TextBox x:Name="_urlTextBox" Margin="20,0,20,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Width="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="" KeyDown="_urlTextBox_KeyDown"/>
+
+        <!--Third row-->
+        <WebView x:Name="webView"  Margin="20" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationCompleted="WebView_NavigationCompleted"/>
     </Grid>
 </Page>

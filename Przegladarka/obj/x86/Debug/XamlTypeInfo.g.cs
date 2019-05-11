@@ -12,14 +12,14 @@ namespace Przegladarka
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMetaDataProvider __appProvider;
-        private global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        private global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
             get
             {
                 if (__appProvider == null)
                 {
-                    __appProvider = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMetaDataProvider();
+                    __appProvider = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMetaDataProvider();
                 }
                 return __appProvider;
             }
@@ -51,7 +51,7 @@ namespace Przegladarka
     }
 }
 
-namespace Przegladarka.Przegladarka_XamlTypeInfo
+namespace WebBrowser.WebBrowser_XamlTypeInfo
 {
     /// <summary>
     /// Main class for providing metadata for the app or library
@@ -60,15 +60,15 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+        private global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
 
-        private global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider Provider
+        private global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider Provider
         {
             get
             {
                 if (_provider == null)
                 {
-                    _provider = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider();
+                    _provider = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider();
                 }
                 return _provider;
             }
@@ -254,8 +254,8 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType userType;
+            global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -263,7 +263,7 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
             {
 
             case 0:   //  Przegladarka.AddFavorite
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
                 userType.AddMemberName("Result");
                 userType.AddMemberName("SiteName");
                 userType.AddMemberName("SiteUrl");
@@ -272,15 +272,15 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
                 break;
 
             case 1:   //  Windows.UI.Xaml.Controls.ContentDialog
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  Windows.UI.Xaml.Controls.ContentControl
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  Przegladarka.AddFavoriteResult
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Add", global::Przegladarka.AddFavoriteResult.Add);
                 userType.AddEnumValue("Cancel", global::Przegladarka.AddFavoriteResult.Cancel);
                 userType.SetIsLocalType();
@@ -288,25 +288,25 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
                 break;
 
             case 4:   //  System.Enum
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
             case 5:   //  System.ValueType
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case 6:   //  Object
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 7:   //  String
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 8:   //  Przegladarka.MainPage
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_8_MainPage;
                 userType.AddMemberName("HomePage");
                 userType.AddMemberName("Page");
@@ -315,15 +315,15 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
                 break;
 
             case 9:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 10:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 11:   //  System.Uri
-                userType = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
@@ -385,38 +385,38 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember xamlMember = null;
-            global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType userType;
+            global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember xamlMember = null;
+            global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "Przegladarka.AddFavorite.Result":
-                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
-                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "Result", "Przegladarka.AddFavoriteResult");
+                userType = (global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember(this, "Result", "Przegladarka.AddFavoriteResult");
                 xamlMember.Getter = get_0_AddFavorite_Result;
                 xamlMember.Setter = set_0_AddFavorite_Result;
                 break;
             case "Przegladarka.AddFavorite.SiteName":
-                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
-                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "SiteName", "String");
+                userType = (global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember(this, "SiteName", "String");
                 xamlMember.Getter = get_1_AddFavorite_SiteName;
                 xamlMember.Setter = set_1_AddFavorite_SiteName;
                 break;
             case "Przegladarka.AddFavorite.SiteUrl":
-                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
-                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "SiteUrl", "String");
+                userType = (global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.AddFavorite");
+                xamlMember = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember(this, "SiteUrl", "String");
                 xamlMember.Getter = get_2_AddFavorite_SiteUrl;
                 xamlMember.Setter = set_2_AddFavorite_SiteUrl;
                 break;
             case "Przegladarka.MainPage.HomePage":
-                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
-                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "HomePage", "System.Uri");
+                userType = (global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
+                xamlMember = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember(this, "HomePage", "System.Uri");
                 xamlMember.Getter = get_3_MainPage_HomePage;
                 xamlMember.Setter = set_3_MainPage_HomePage;
                 break;
             case "Przegladarka.MainPage.Page":
-                userType = (global::Przegladarka.Przegladarka_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
-                xamlMember = new global::Przegladarka.Przegladarka_XamlTypeInfo.XamlMember(this, "Page", "System.Uri");
+                userType = (global::WebBrowser.WebBrowser_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Przegladarka.MainPage");
+                xamlMember = new global::WebBrowser.WebBrowser_XamlTypeInfo.XamlMember(this, "Page", "System.Uri");
                 xamlMember.Getter = get_4_MainPage_Page;
                 xamlMember.Setter = set_4_MainPage_Page;
                 break;
@@ -475,9 +475,9 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::Przegladarka.Przegladarka_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::WebBrowser.WebBrowser_XamlTypeInfo.XamlSystemBaseType
     {
-        global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -491,7 +491,7 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -688,7 +688,7 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -697,7 +697,7 @@ namespace Przegladarka.Przegladarka_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::Przegladarka.Przegladarka_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::WebBrowser.WebBrowser_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

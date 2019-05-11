@@ -8156,9 +8156,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MP\\source\\repos\\Przegladarka\\Przegladarka\\Przegladarka.csproj",
-      "projectName": "Przegladarka",
-      "projectPath": "C:\\Users\\MP\\source\\repos\\Przegladarka\\Przegladarka\\Przegladarka.csproj",
+      "projectUniqueName": "C:\\Users\\MP\\source\\repos\\Przegladarka\\Przegladarka\\WebBrowser.csproj",
+      "projectName": "WebBrowser",
+      "projectPath": "C:\\Users\\MP\\source\\repos\\Przegladarka\\Przegladarka\\WebBrowser.csproj",
       "packagesPath": "C:\\Users\\MP\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MP\\source\\repos\\Przegladarka\\Przegladarka\\obj\\",
       "projectStyle": "PackageReference",
