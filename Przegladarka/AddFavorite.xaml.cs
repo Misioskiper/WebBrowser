@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Przegladarka.Logic;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,10 +28,12 @@ namespace Przegladarka
         public AddFavoriteResult Result { get; set; }
         public string SiteName { get; set; }
         public string SiteUrl { get; set; }
-        public AddFavorite(string siteUrl)
+        Library library = new Library();
+        public AddFavorite(string siteUrl, Library lib)
         {
             this.InitializeComponent();
             _siteUrlTextBox.Text = siteUrl;
+            library = lib;
         }
 
         private void AddButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -39,6 +42,8 @@ namespace Przegladarka
 
             SiteName = _siteNameTextBox.Text;
             SiteUrl = _siteUrlTextBox.Text;
+            Favorite fav = new Favorite(SiteName, SiteUrl);
+            library.AddFavorite(fav);
         }
 
         private void CancelButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)

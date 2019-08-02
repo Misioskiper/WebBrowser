@@ -123,6 +123,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Logic\ExtensionMethods.cs" />
+    <Compile Include="Logic\Favorites.cs" />
+    <Compile Include="Logic\Library.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

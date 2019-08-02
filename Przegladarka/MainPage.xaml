@@ -38,7 +38,7 @@
                 <SymbolIcon Symbol="Refresh"  />
             </Button>
         </StackPanel>
-        <ComboBox x:Name="FavoritesComboBox" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto"></ComboBox>
+        <ComboBox x:Name="FavoritesComboBox" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="Auto" SelectionChanged="FavoritesComboBox_SelectionChanged"></ComboBox>
         <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button x:Name="AddToFav" Margin="5,0,0,0" VerticalAlignment="Stretch" Width="40" Click="AddToFav_Click">
                 <SymbolIcon Symbol="Favorite" />

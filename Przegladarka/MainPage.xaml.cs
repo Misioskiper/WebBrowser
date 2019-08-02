@@ -27,29 +27,31 @@ namespace Przegladarka
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        
-
         public Uri HomePage { get; set; }
         public Uri Page { get; set; }
-        private string _homePage = "https://google.pl";
+        private string _homePage = "https://www.google.pl/";
+        private Library _library { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
             InitializeMainPage();
+            _library = new Library();
+            _library.ImportFromFile();
+            FavoritesComboBox.DataContext = _library.GetFavorites();
         }
-
+    
         private void InitializeMainPage()
         {
             var appView = ApplicationView.GetForCurrentView();
-            appView.Title = "MisioskiperDEV Internet Browser";
-            var homePage = new Uri("https://google.com");
-            webView.Navigate(homePage);
+            appView.Title = "Misioskiper.dev Internet Browser";
+            HomePage = new Uri(_homePage);
+            webView.Navigate(HomePage);
         }
 
         private void Prev_Click(object sender, RoutedEventArgs e)
         {
-            if (webView.CanGoBack)
+            if(webView.CanGoBack)
             {
                 webView.GoBack();
             }
@@ -57,7 +59,7 @@ namespace Przegladarka
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            if (webView.CanGoForward)
+            if(webView.CanGoForward)
             {
                 webView.GoForward();
             }
@@ -65,26 +67,26 @@ namespace Przegladarka
 
         private void Stop_Click(object sender, RoutedEventArgs e)
         {
-            this.webView.Stop();
+            webView.Stop();
         }
 
         private void Reload_Click(object sender, RoutedEventArgs e)
         {
-            this.webView.Refresh();
+            webView.Refresh();
         }
 
         private async void AddToFav_Click(object sender, RoutedEventArgs e)
         {
             var currentSiteUrl = webView.Source.ToString();
-            var addToFavoriteDialog = new AddFavorite(currentSiteUrl);
+            var addToFavoriteDialog = new AddFavorite(currentSiteUrl, _library);
             await addToFavoriteDialog.ShowAsync();
-
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
             string link = _urlTextBox.Text;
-            this.webView.Navigate(new Uri(link));
+            Page = new Uri(link);
+            webView.Navigate(Page);
         }
 
         private async void _urlTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -93,6 +95,7 @@ namespace Przegladarka
                 return;
 
             var searchedSite = _urlTextBox.Text;
+
             if (searchedSite.HasHttpScheme() || searchedSite.HasHttpsScheme())
             {
                 webView.Navigate(new Uri(searchedSite));
@@ -102,6 +105,7 @@ namespace Przegladarka
                 var dialog = new MessageDialog("Please type valid site address.");
                 await dialog.ShowAsync();
             }
+
         }
 
         private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
@@ -109,6 +113,12 @@ namespace Przegladarka
             _urlTextBox.Text = sender.Source.ToString();
             Prev.IsEnabled = sender.CanGoBack;
             Next.IsEnabled = sender.CanGoForward;
+        }
+
+        private void FavoritesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedFav = (Favorite)FavoritesComboBox.SelectedItem;
+            webView.Navigate(new Uri(selectedFav.SiteUrl));
         }
     }
 }
